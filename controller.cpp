@@ -17,5 +17,10 @@ void Controller::acquire(int acquisition_id) {
     auto end = chrono::high_resolution_clock::now();
     auto us = chrono::duration_cast<chrono::microseconds>(end - start).count();
 
-    cout << "Acq" << acquisition_id << ": Acquisition took " << us << " us\n";
+    static mutex cout_mtx;
+    {
+        lock_guard<mutex> lock(cout_mtx);
+        cout << "Acq" << acquisition_id << ": Acquisition took " << us << " us\n";
+    }
+
 }
