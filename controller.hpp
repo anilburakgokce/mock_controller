@@ -2,6 +2,8 @@
 #include <vector>
 #include <mutex>
 
+using namespace std;
+
 class Controller {
 public:
     Controller();
@@ -9,6 +11,6 @@ public:
 
 private:
     Device device_;
-    std::vector<uint16_t> buffer_;
-    std::mutex mtx_;
+    vector<uint16_t> buffer_;
+    mutex mtx_;
 };

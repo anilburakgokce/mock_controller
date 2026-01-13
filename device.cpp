@@ -3,9 +3,11 @@
 #include <thread>
 #include <chrono>
 
+using namespace std;
+
 Device::Device() {}
 
-std::vector<uint16_t> Device::read_samples() {
-    std::this_thread::sleep_for(std::chrono::microseconds(10)); // hw latency
+vector<uint16_t> Device::read_samples() {
+    this_thread::sleep_for(chrono::microseconds(10)); // hw latency
     return {1, 2, 3, 4, 5};
 }

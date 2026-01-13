@@ -1,6 +1,8 @@
 #include <vector>
 #include <cstdint>
 
+using namespace std;
+
 class Device {
 public:
     Device();
