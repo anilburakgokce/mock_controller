@@ -8,7 +8,7 @@ using namespace std;
 class Controller {
 public:
     Controller();
-    void acquire();
+    void acquire(int acquisition_id);
 
 private:
     Device device_;

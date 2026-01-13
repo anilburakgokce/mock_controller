@@ -4,7 +4,7 @@
 
 Controller::Controller() {}
 
-void Controller::acquire() {
+void Controller::acquire(int acquisition_id) {
     auto start = chrono::high_resolution_clock::now();
 
     auto data = device_.read_samples();
@@ -17,5 +17,5 @@ void Controller::acquire() {
     auto end = chrono::high_resolution_clock::now();
     auto us = chrono::duration_cast<chrono::microseconds>(end - start).count();
 
-    cout << "Acquisition took " << us << " us\n";
+    cout << "Acq" << acquisition_id << ": Acquisition took " << us << " us\n";
 }
