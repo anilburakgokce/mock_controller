@@ -1,3 +1,4 @@
+#pragma once
 #include "device.hpp"
 #include <vector>
 #include <mutex>
