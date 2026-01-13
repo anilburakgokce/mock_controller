@@ -5,7 +5,8 @@
 using namespace std;
 
 int main(){
-    const int num_threads = 4;
+    int num_threads_hint = thread::hardware_concurrency();
+    const int num_threads = num_threads_hint ? num_threads_hint : 1;
     vector<thread> threads;
 
     Controller ctrl;
