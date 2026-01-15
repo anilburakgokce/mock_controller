@@ -7,4 +7,5 @@ add_executable(mock_controller
     main.cpp
     controller.cpp
     device.cpp
+    ent_photon_ts_gen.cpp
 )
