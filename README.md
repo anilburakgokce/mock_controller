@@ -11,3 +11,4 @@ cd build
 cmake ..
 make
 ./mock_controller
+```
